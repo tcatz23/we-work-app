@@ -1,0 +1,17 @@
+<div class="container mt-4">
+<h2>List of our buildings</h2>
+</div>
+
+<div class="card-group mt-5">
+<% @buildings.each do |building| %>
+<div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title"><%= building.name %></h5>
+    <h6 class="card-subtitle mb-2 text-muted"><%= building.country %></h6>
+    <p class="card-text"><%= building.address %></p>
+    <p class="card-text">$ <%= building.rent_per_floor %></p>
+    <p class="card-text"><%= building.number_of_floors %> floors</p>
+  </div>
+</div>
+<% end %>
+</div>
